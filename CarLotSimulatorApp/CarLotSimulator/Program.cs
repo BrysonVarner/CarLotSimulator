@@ -32,9 +32,9 @@ namespace CarLotSimulator
             myCar.HonkNoise = "beep";
             myCar.IsDriveable = true;
             lot.Cars.Add(myCar);
-
             myCar.MakeEngineNoise(myCar.EngineNoise);
             myCar.MakeHonkNoise(myCar.HonkNoise);
+            Console.WriteLine($"There is currently { CarLot.numberOfCars} car on the lot.");
 
             var myTruck = new Car()
             {
@@ -48,11 +48,13 @@ namespace CarLotSimulator
             lot.Cars.Add(myTruck);
             myTruck.MakeEngineNoise(myTruck.EngineNoise);
             myTruck.MakeHonkNoise(myTruck.HonkNoise);
+            Console.WriteLine($"There are currently {CarLot.numberOfCars} cars on the lot.");
 
             var myOldCar = new Car(1997, "Ford", "Probe", "no", "Yes", false);
             lot.Cars.Add(myOldCar);
             myOldCar.MakeEngineNoise(myOldCar.EngineNoise);
             myOldCar.MakeHonkNoise(myOldCar.HonkNoise);
+            Console.WriteLine($"There are currently {CarLot.numberOfCars} cars on the lot.");
 
             //*************BONUS X 2*************//
 

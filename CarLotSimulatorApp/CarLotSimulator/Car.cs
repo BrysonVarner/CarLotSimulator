@@ -14,7 +14,8 @@ namespace CarLotSimulator
         //The methods should take one string parameter: the respective noise property
 
         public Car() 
-        { 
+        {
+            CarLot.numberOfCars++;
         }
 
         public int Year { get; set; }
@@ -32,6 +33,7 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDriveable = isDriveable;
+            CarLot.numberOfCars++;
         }
         public void MakeEngineNoise(string EngineNoise)
         {
